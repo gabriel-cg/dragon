@@ -1,0 +1,33 @@
+<div class="container">
+  <section class="panel create-dragon-page">
+    <p class="panel-heading">
+      Adicionar novo dragão
+    </p>
+    <div class="panel-block">
+      <form class="create-form" (ngSubmit)="onSubmit()" #createDragonForm="ngForm">
+        <div class="field">
+          <label class="label">Nome</label>
+          <div class="control">
+            <input class="input" required type="text" name="name" [(ngModel)]="dragon.name">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Tipo</label>
+          <div class="control">
+            <input class="input" type="text" name="type" [(ngModel)]="dragon.type">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">História</label>
+          <div class="control">
+            <input class="input" type="text" name="type" [(ngModel)]="dragon.histories[0]">
+          </div>
+        </div>    
+        <div class="dragon-buttons -right">
+          <button class="dragon-button -save" type="submit">Salvar Dragão</button>
+          <button class="dragon-button -back" type="button" (click)="onBack()">Voltar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

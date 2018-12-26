@@ -1,0 +1,30 @@
+<section class="modal dragons-data">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <form (ngSubmit)="submit()" #updateDragonForm="ngForm">
+      <div class="field">
+        <label class="label">Nome</label>
+        <div class="control">
+          <input class="input" type="text" name="name" [(ngModel)]="dragon.name">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Tipo</label>
+        <div class="control">
+          <input class="input" type="text" name="type" [(ngModel)]="dragon.type">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">História</label>
+        <div class="control">
+          <input class="input" type="text" name="history" placeholder="Text input" [(ngModel)]="dragon.histories[0]">
+        </div>
+      </div>
+      <div class="dragon-buttons">
+        <button class="dragon-button -save" type="submit">Atualizar Dragão</button>
+        <button class="dragon-button -back" type="button" (click)="return()">Voltar</button>
+      </div>
+    </form>
+  </div>
+  <button class="modal-close is-large" aria-label="close" (click)="return()"></button>
+</section>

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  .create-dragon-page {
+    width: 400px;
+  }
+
+  .create-form {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,45 @@
+.dragons-container {
+  display: flex;
+  background-color: #f2f2f2;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 50px 0;
+}
+
+app-dragons-list {
+  width: 700px;
+  max-width: 100%;
+}
+
+.dragons-header {
+  background-color: #2B2C2C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 60px;
+
+  > header {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  > button {
+    background-color: transparent;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  > figure svg {
+    width: 30px;
+  }
+
+  > button svg {
+    fill: white;
+  }
+} 
+
