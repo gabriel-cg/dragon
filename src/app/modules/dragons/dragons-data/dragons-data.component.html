@@ -5,23 +5,23 @@
       <div class="field">
         <label class="label">Nome</label>
         <div class="control">
-          <input class="input" type="text" name="name" [(ngModel)]="dragon.name">
+          <input class="input" required type="text" name="name" [(ngModel)]="dragon.name">
         </div>
       </div>
       <div class="field">
         <label class="label">Tipo</label>
         <div class="control">
-          <input class="input" type="text" name="type" [(ngModel)]="dragon.type">
+          <input class="input" required type="text" name="type" [(ngModel)]="dragon.type">
         </div>
       </div>
       <div class="field">
         <label class="label">História</label>
         <div class="control">
-          <input class="input" type="text" name="history" placeholder="Text input" [(ngModel)]="dragon.histories[0]">
+          <input class="input" type="text" name="history" [(ngModel)]="dragon.histories[0]">
         </div>
       </div>
       <div class="dragon-buttons">
-        <button class="dragon-button -save" type="submit">Atualizar Dragão</button>
+        <button class="dragon-button -save" type="submit" [disabled]="!updateDragonForm.form.valid">Atualizar Dragão</button>
         <button class="dragon-button -back" type="button" (click)="return()">Voltar</button>
       </div>
     </form>

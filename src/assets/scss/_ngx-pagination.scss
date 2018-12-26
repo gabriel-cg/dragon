@@ -1,5 +1,11 @@
 .ngx-pagination {
+  display: flex;
+  justify-content: center;
   
+  .pagination-previous {
+    order: 0;
+  }
+
   li {
     border: 0;
   }

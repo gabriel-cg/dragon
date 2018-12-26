@@ -101,7 +101,7 @@
     background-color: #48D2A0;
     color:white;
 
-    &:hover {
+    &:not([disabled]):hover {
       background-color: #3CA581;
     }
   }
@@ -111,7 +111,7 @@
     border: 1px solid #6D676E;
     order: 0;
     
-    &:hover {
+    &:not([disabled]):hover {
       background-color: #6D676E;
       color: white;
     }
@@ -134,5 +134,9 @@
     > svg {
       fill: #F54B5E;
     }
+  }
+
+  &[disabled] {
+    opacity: 0.5;
   }
 }

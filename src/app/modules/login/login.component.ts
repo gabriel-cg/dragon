@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../core/services';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     private router: Router,
+    private toastr: ToastrService,
   ) { }
 
   ngOnInit() {}
@@ -25,6 +27,9 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.user)
       .then(result => {
         this.router.navigateByUrl('/dragons')
+      })
+      .catch( ()=> {
+        this.toastr.error('Usuário ou senha incorretos', '');
       });
   }
 

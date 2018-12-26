@@ -2,12 +2,16 @@
 
 Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
-## Pré-requisitos para rodar a aplicação
+## Rodando a aplicação
 
-ter node instalado;
-
+- npm install
 - npm run server (para rodar server json)
 - npm start (para rodar a aplicação)
+- Usuário: gandalf@thegrey.com | senha: mellon
+
+##Importante 
+
+Não é possível editar ou excluir um dragão que não tenha slug. Os dados estão vindo vazios da API.
 
 ## Libs utilizadas
 
